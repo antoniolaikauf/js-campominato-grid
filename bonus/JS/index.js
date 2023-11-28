@@ -16,12 +16,10 @@ button.addEventListener("click", function () {
         if (valueSelect === "hard") {
             createItemsHard(contenitoreGriglia);
         }if (valueSelect === "hard1") {
-            createItemsHard1(contenitoreGriglia)
+            createItemsHard1(contenitoreGriglia);
         } else if (valueSelect === "hard2") {
-            createItemsHard2(contenitoreGriglia)
+            createItemsHard2(contenitoreGriglia);
         }
-
-        // funzione per crare items e dargli caratteristiche
 })
 
 
