@@ -11,32 +11,32 @@ button.addEventListener("click", function () {
         contenitoreGriglia.classList.add("contenitore");
         // aggiunto contenitore dentro main
         mainContenitore.append(contenitoreGriglia);
-
-        // funzione per crare items e dargli caratteristiche
-        createItems(contenitoreGriglia);
+        // ciclo per creare items
+        for (let i = 0; i < 100; i++) {
+            createItems(contenitoreGriglia, i)
+        }
 })
 
 
-function createItems(contItems) {
-    for (let i = 1; i <= 100; i++) {
+function createItems(contItems ,numero) {
         // creazione degli items
        let items= document.createElement("div");
         //dato classe js-square agli items
        items.classList.add("js-square");
        //  dato numero a items  
-       items.append(i)
+       items.append(numero);
+         // funzione per aggiungere il background a items messo funzione in questa altra funzione perchè deve prendere l'items che è dentro solo qua
+         bgItems(items, numero);
        // messo tutti gli items dentro a contenitore griglia
-       contItems.append(items)
-        // funzione per aggiungere il background a items
-        bgItems(items, i)
-    }
+         return contItems.append(items);
 }
 
 // creazione della funzione per aggiungere lo sfondo ad items
-function bgItems(square, numero) {
+function bgItems(square, numeroAttuale) {
+    // evento per aggiungere il bg all'items
      square.addEventListener("click", function () {
-     square.classList.add("js-backgrounditems")
-     console.log(numero);
+        square.classList.add("js-backgrounditems")
+        return console.log(numeroAttuale);
     })
 }
 
