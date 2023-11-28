@@ -27,15 +27,16 @@ function createItems(contItems) {
        items.append(i)
        // messo tutti gli items dentro a contenitore griglia
        contItems.append(items)
-    
-    
-       // crazione evento per attivare il background a items 
-        items.addEventListener("click", function () {
-            items.classList.add("js-backgrounditems")
-            console.log(i);
-        })
+        // funzione per aggiungere il background a items
+        bgItems(items, i)
     }
 }
 
-
+// creazione della funzione per aggiungere lo sfondo ad items
+function bgItems(square, numero) {
+     square.addEventListener("click", function () {
+     square.classList.add("js-backgrounditems")
+     console.log(numero);
+    })
+}
 
