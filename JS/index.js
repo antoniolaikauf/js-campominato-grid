@@ -15,7 +15,9 @@ button.addEventListener("click", function () {
         for (let i = 1; i <= 100; i++) {
         //    creazione contenuto della griglia
             let newElement = createItems(i)
-            contenitoreGriglia.append(newElement)
+            // dato a new wlwmwnt classe 
+            newElement.classList.add("js-square");
+            contenitoreGriglia.append(newElement);
         }
 })
 
@@ -23,8 +25,6 @@ button.addEventListener("click", function () {
 function createItems(numero) {
     // creazione degli items
    let items= document.createElement("div");
-    //dato classe js-square agli items
-   items.classList.add("js-square");
    //  dato numero a items  
    items.append(numero);
      // funzione per aggiungere il background a items messo funzione in questa altra funzione perchè deve prendere l'items che è dentro solo qua

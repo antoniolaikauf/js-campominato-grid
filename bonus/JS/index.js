@@ -16,16 +16,22 @@ button.addEventListener("click", function () {
         if (valueSelect === "hard") {
             for (let i = 1; i <= 100; i++) {
                     let newElement = createItems(i)
+                    // dato newelement classe in base a difficoltà
+                    newElement.classList.add("js-square")
                     contenitoreGriglia.append(newElement)
                 }
         } else if (valueSelect === "hard1") {
             for (let i = 1; i <= 81; i++) {
-                let newElement = createItemsHard1(i);
+                let newElement = createItems(i);
+                // dato newelement classe in base a difficoltà
+                newElement.classList.add("js-square1")
                 contenitoreGriglia.append(newElement)
            }
         } else if (valueSelect === "hard2") {
             for (let i = 1; i <= 49; i++) {
-                let newElement = createItemsHard2(i);
+                let newElement = createItems(i);
+                // dato newelement classe in base a difficoltà
+                newElement.classList.add("js-square2")
                 contenitoreGriglia.append(newElement);
            }
         }
@@ -35,41 +41,11 @@ button.addEventListener("click", function () {
 function createItems(numero) {
     // creazione degli items
    let items= document.createElement("div");
-    //dato classe js-square agli items
-   items.classList.add("js-square");
    //  dato numero a items  
    items.append(numero);
      // funzione per aggiungere il background a items 
      eventoBgItems(items, numero);
 
-    return items
-}
-
-// creazione loop con 81 items
-function createItemsHard1(numero) {
-     // creazione degli items
-    let items =document.createElement("div");
-    //dato classe js-square agli items
-     items.classList.add("js-square1") 
-    //  dato numero a items  
-    items.append(numero);
-    //    funzione per aggiungere il background a items
-    eventoBgItems(items, numero);
-    
-    return items
-}
-
-// creazione loop con 49 items
-function createItemsHard2(numero) {
-     // creazione degli items
-     let items =document.createElement("div");
-     //dato classe js-square agli items
-     items.classList.add("js-square2") 
-     //  dato numero a items
-    items.append(numero);
-     //    funzione per aggiungere il background a items
-    eventoBgItems(items, numero);
-             
     return items
 }
 
