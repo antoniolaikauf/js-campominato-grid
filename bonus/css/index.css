@@ -17,7 +17,7 @@ header img{
     height: 60px;
 }
 
-#logo{
+#logo, #difficolta{
     display: flex;
     align-items: center;
 }
@@ -54,4 +54,20 @@ footer{
 
 .js-backgrounditems{
     background-color: #03A9F4;
+}
+
+/* caratteristiche tabella con diverse difficoltà */
+/* difficolta hard+ */
+.js-square1{
+    width: calc(100% / 9 );
+    height:calc(100% / 9) ;
+    text-align: center;
+    border: 1px solid black;
+}
+/* difficolta ard++ */
+.js-square1{
+    width: calc(100% / 9 );
+    height:calc(100% / 9) ;
+    text-align: center;
+    border: 1px solid black;
 }
