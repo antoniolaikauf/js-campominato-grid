@@ -14,60 +14,63 @@ button.addEventListener("click", function () {
         // controllo value per vedere che difficoltà ha scelto
         let valueSelect= document.getElementById("scelta-difficolta").value;
         if (valueSelect === "hard") {
-            createItemsHard(contenitoreGriglia);
-        }if (valueSelect === "hard1") {
-            createItemsHard1(contenitoreGriglia);
+            for (let i = 1; i <= 100; i++) {
+                    let newElement = createItems(i)
+                    contenitoreGriglia.append(newElement)
+                }
+        } else if (valueSelect === "hard1") {
+            for (let i = 1; i <= 81; i++) {
+                let newElement = createItemsHard1(i);
+                contenitoreGriglia.append(newElement)
+           }
         } else if (valueSelect === "hard2") {
-            createItemsHard2(contenitoreGriglia);
+            for (let i = 1; i <= 49; i++) {
+                let newElement = createItemsHard2(i);
+                contenitoreGriglia.append(newElement);
+           }
         }
 })
 
 
-function createItemsHard(contItems) {
-    for (let i = 1; i <= 100; i++) {
-        // creazione degli items
-       let items= document.createElement("div");
-        //dato classe js-square agli items
-       items.classList.add("js-square");
-       //  dato numero a items  
-       items.append(i);
-       // messo tutti gli items dentro a contenitore griglia
-       contItems.append(items);
-        //    evento bg dei items
-       eventoBgItems(items, i);
-    }
+function createItems(numero) {
+    // creazione degli items
+   let items= document.createElement("div");
+    //dato classe js-square agli items
+   items.classList.add("js-square");
+   //  dato numero a items  
+   items.append(numero);
+     // funzione per aggiungere il background a items 
+     eventoBgItems(items, numero);
+
+    return items
 }
 
 // creazione loop con 81 items
-function createItemsHard1(contItems) {
-    for (let i = 1; i <= 81; i++) {
-         // creazione degli items
-        let items =document.createElement("div");
-        //dato classe js-square agli items
-        items.classList.add("js-square1") 
-        //  dato numero a items  
-        items.append(i);
-        // messo tutti gli items dentro a contenitore griglia
-        contItems.append(items);
-         //    evento bg dei items
-        eventoBgItems(items, i);
-    }
+function createItemsHard1(numero) {
+     // creazione degli items
+    let items =document.createElement("div");
+    //dato classe js-square agli items
+     items.classList.add("js-square1") 
+    //  dato numero a items  
+    items.append(numero);
+    //    funzione per aggiungere il background a items
+    eventoBgItems(items, numero);
+    
+    return items
 }
 
 // creazione loop con 49 items
-function createItemsHard2(contItems) {
-    for (let i = 1; i <= 49; i++) {
-         // creazione degli items
-        let items =document.createElement("div");
-         //dato classe js-square agli items
-        items.classList.add("js-square2") 
-        //  dato numero a items
-        items.append(i);
-        // messo tutti gli items dentro a contenitore griglia
-        contItems.append(items);
-         //    evento bg dei items
-        eventoBgItems(items, i);
-    }
+function createItemsHard2(numero) {
+     // creazione degli items
+     let items =document.createElement("div");
+     //dato classe js-square agli items
+     items.classList.add("js-square2") 
+     //  dato numero a items
+    items.append(numero);
+     //    funzione per aggiungere il background a items
+    eventoBgItems(items, numero);
+             
+    return items
 }
 
 // creazione di una funzione con evento
