@@ -65,9 +65,9 @@ footer{
     border: 1px solid black;
 }
 /* difficolta ard++ */
-.js-square1{
-    width: calc(100% / 9 );
-    height:calc(100% / 9) ;
+.js-square2{
+    width: calc(100% / 7 );
+    height:calc(100% / 7) ;
     text-align: center;
     border: 1px solid black;
 }
