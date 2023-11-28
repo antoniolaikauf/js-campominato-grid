@@ -50,11 +50,11 @@ function createItems(numero) {
 }
 
 // creazione di una funzione con evento
-function eventoBgItems(square ,numero ) {
+function eventoBgItems(square ,numeroAttuale ) {
      // crazione evento per attivare il background a items 
     square.addEventListener("click", function () {
         square.classList.add("js-backgrounditems")
-        console.log(numero);
+        return console.log(numeroAttuale);
     })
 }
 
