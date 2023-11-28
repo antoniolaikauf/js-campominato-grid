@@ -22,6 +22,9 @@ header img{
 /* caratteristiche main */
 main{
     height: calc(100vh - 120px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 /* caratteristiche footer */
 footer{
@@ -41,10 +44,8 @@ footer{
 }
 /* caratteristiche container */
 .contenitore{
-    display: flex;
     flex-wrap: wrap;
     width: 450px;
     height: 450px;
     display: flex;
-    align-items: center;
 }
