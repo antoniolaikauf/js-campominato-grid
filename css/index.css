@@ -1,0 +1,31 @@
+/* setup generici */
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+/* caratteristiche header */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    height: 60px;
+    /* debug */
+    background-color: red;
+}
+
+header img{
+    height: 60px;
+}
+
+/* caratteristiche main */
+main{
+    height: calc(100vh - 120px);
+}
+/* caratteristiche footer */
+footer{
+    height: 60px;
+    /* debug */
+    background-color: aqua;
+}
