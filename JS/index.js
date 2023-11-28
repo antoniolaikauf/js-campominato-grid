@@ -13,22 +13,24 @@ button.addEventListener("click", function () {
         mainContenitore.append(contenitoreGriglia);
         // ciclo per creare items
         for (let i = 0; i < 100; i++) {
-            createItems(contenitoreGriglia, i)
+        //    creazione contenuto della griglia
+            let newElement = createItems(i)
+            contenitoreGriglia.append(newElement)
         }
 })
 
-
-function createItems(contItems ,numero) {
-        // creazione degli items
-       let items= document.createElement("div");
-        //dato classe js-square agli items
-       items.classList.add("js-square");
-       //  dato numero a items  
-       items.append(numero);
-         // funzione per aggiungere il background a items messo funzione in questa altra funzione perchè deve prendere l'items che è dentro solo qua
-         bgItems(items, numero);
-       // messo tutti gli items dentro a contenitore griglia
-         return contItems.append(items);
+// funzione per creare un nuovo elemento
+function createItems(numero) {
+    // creazione degli items
+   let items= document.createElement("div");
+    //dato classe js-square agli items
+   items.classList.add("js-square");
+   //  dato numero a items  
+   items.append(numero);
+     // funzione per aggiungere il background a items messo funzione in questa altra funzione perchè deve prendere l'items che è dentro solo qua
+     bgItems(items, numero);
+     
+    return items
 }
 
 // creazione della funzione per aggiungere lo sfondo ad items
