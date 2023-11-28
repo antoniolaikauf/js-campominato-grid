@@ -12,7 +12,7 @@ button.addEventListener("click", function () {
         // aggiunto contenitore dentro main
         mainContenitore.append(contenitoreGriglia);
         // ciclo per creare items
-        for (let i = 0; i < 100; i++) {
+        for (let i = 1; i <= 100; i++) {
         //    creazione contenuto della griglia
             let newElement = createItems(i)
             contenitoreGriglia.append(newElement)
@@ -29,7 +29,7 @@ function createItems(numero) {
    items.append(numero);
      // funzione per aggiungere il background a items messo funzione in questa altra funzione perchè deve prendere l'items che è dentro solo qua
      bgItems(items, numero);
-     
+
     return items
 }
 
