@@ -5,6 +5,7 @@ let mainContenitore = document.getElementById("js-main");
 const button = document.getElementById("js-button");
 // evento per creare il div con dentro la tabella e tutti gli items
 button.addEventListener("click", function () {
+         mainContenitore.innerHTML=""
         // creazione del contenitore dove ci saranno gli items
         let contenitoreGriglia = document.createElement("div");
         // dato a div classe contenitore
