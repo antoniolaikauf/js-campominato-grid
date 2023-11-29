@@ -8,7 +8,7 @@ button.addEventListener("click", function () {
         // creazione del contenitore dove ci saranno gli items
         let contenitoreGriglia = document.createElement("div");
         // dato a div classe contenitore
-        contenitoreGriglia.classList.add("contenitore");
+        contenitoreGriglia.classList.add("js-contenitore");
         // aggiunto contenitore dentro main
         mainContenitore.append(contenitoreGriglia);
         // ciclo per creare items
