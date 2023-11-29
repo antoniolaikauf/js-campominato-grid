@@ -13,32 +13,27 @@ button.addEventListener("click", function () {
         mainContenitore.append(contenitoreGriglia);
         // ciclo per creare items
         for (let i = 1; i <= 100; i++) {
-        //    creazione contenuto della griglia
-            let newElement = createItems(i)
-            // dato a new wlwmwnt classe 
-            newElement.classList.add("js-square");
+        //   creazione contenuto della griglia
+            let newElement = createItems()
+            newElement.append(i)
+
             contenitoreGriglia.append(newElement);
+
+            // evento per dare bg ad newelemnt
+            newElement.addEventListener("click", function () {
+                newElement.classList.add("js-backgrounditems")
+                console.log(i);
+            })
         }
 })
 
 // funzione per creare un nuovo elemento
-function createItems(numero) {
+function createItems() {
     // creazione degli items
    let items= document.createElement("div");
-   //  dato numero a items  
-   items.append(numero);
-     // funzione per aggiungere il background a items messo funzione in questa altra funzione perchè deve prendere l'items che è dentro solo qua
-     bgItems(items, numero);
+
+   items.classList.add("js-square");
 
     return items
-}
-
-// creazione della funzione per aggiungere lo sfondo ad items
-function bgItems(square, numeroAttuale) {
-    // evento per aggiungere il bg all'items
-     square.addEventListener("click", function () {
-        square.classList.add("js-backgrounditems")
-        return console.log(numeroAttuale);
-    })
 }
 
