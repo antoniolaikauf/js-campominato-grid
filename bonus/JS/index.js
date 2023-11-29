@@ -16,45 +16,56 @@ button.addEventListener("click", function () {
         let valueSelect= document.getElementById("scelta-difficolta").value;
         if (valueSelect === "hard") {
             for (let i = 1; i <= 100; i++) {
-                    let newElement = createItems(i)
-                    // dato newelement classe in base a difficoltà
+                    // creazione items
+                    let newElement = createItems()
+                    newElement.append(i)
+                    // aggiungere classe ad items
                     newElement.classList.add("js-square")
+                    // mettere items dentro contenitore
                     contenitoreGriglia.append(newElement)
+                    // dare a items interazione
+                    eventoBgItems(newElement, i);
                 }
         } else if (valueSelect === "hard1") {
             for (let i = 1; i <= 81; i++) {
-                let newElement = createItems(i);
-                // dato newelement classe in base a difficoltà
+                // creazione items
+                let newElement = createItems()
+                newElement.append(i)
+                 // aggiungere classe ad items
                 newElement.classList.add("js-square1")
+                // mettere items dentro contenitore
                 contenitoreGriglia.append(newElement)
+                 // dare a items interazione
+                eventoBgItems(newElement, i);
            }
         } else if (valueSelect === "hard2") {
             for (let i = 1; i <= 49; i++) {
-                let newElement = createItems(i);
-                // dato newelement classe in base a difficoltà
+                // creazione items
+                let newElement = createItems()
+                newElement.append(i) 
+                // aggiungere classe ad items
                 newElement.classList.add("js-square2")
-                contenitoreGriglia.append(newElement);
+                // // mettere items dentro contenitore
+                contenitoreGriglia.append(newElement)
+                 // dare a items interazione
+                eventoBgItems(newElement, i);
            }
         }
 })
 
-
-function createItems(numero) {
+// funzione per creare items
+function createItems() {
     // creazione degli items
-   let items= document.createElement("div");
-   //  dato numero a items  
-   items.append(numero);
-     // funzione per aggiungere il background a items 
-     eventoBgItems(items, numero);
-
+   let items= document.createElement("div"); 
+     
     return items
 }
 
 // creazione di una funzione con evento
-function eventoBgItems(square ,numeroAttuale ) {
+function eventoBgItems(square, numeroAttuale ) {
      // crazione evento per attivare il background a items 
-    square.addEventListener("click", function () {
-        square.classList.add("js-backgrounditems")
+      square.addEventListener("click", function () {
+       square.classList.add("js-backgrounditems")
         return console.log(numeroAttuale);
     })
 }
